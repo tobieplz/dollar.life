@@ -1,136 +1,60 @@
-.chat-bubble {
-    margin-top: 200px;
-    height: 72px;
-    width: 46px;
-    background: #e5e5e5;
-    position: relative;
-    margin: 200px auto;
-}
-
-.chat-bubble:before {
-    content: '';
-    height: 72px;
-    width: 72px;
-    left: -36px;
-    position: absolute;
-    display: block;
-    background: #e5e5e5;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.chat-bubble:after {
-    content: '';
-    height: 72px;
-    width: 72px;
-    right: -36px;
-    position: absolute;
-    display: block;
-    background: #e5e5e5;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.chat-bubble .tail {
-    height: 25px;
-    width: 25px;
-    background: #e5e5e5;
-    position: absolute;
-    left: -40px;
-    bottom: 2px;
-    border-radius: 50%;
-}
-
-.chat-bubble .tail:before {
-    height: 12px;
-    width: 12px;
-    background: #e5e5e5;
-    content: '';
-    display: block;
-    border-radius: 50%;
-    position: absolute;
-    left: -10px;
-    bottom: -8px;
-}
-
-.chat-bubble .loading {
-    position: absolute;
-    z-index: 10;
-    width: 67px;
-    left: -11px;
-    top: 27px;
-}
-
-.chat-bubble .loading .dot {
-    height: 17px;
-    width: 17px;
-    border-radius: 50%;
-    background: #c1c1c1;
-    display: block;
-    float: left;
-    margin: 0 0 0 8px;
-}
-
-.chat-bubble .loading .dot:first-child {
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:600,700);
+*, *:before, *:after {
     margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.chat-bubble .loading .dot.one {
-    -webkit-animation: cycleOne 1s ease-in-out infinite;
-    -webkit-animation-direction: normal;
+html {
+    font-family: 'Source Sans Pro', 'sans-serif';
+    font-weight: 700;
+    background: #0e1417;
 }
 
-.chat-bubble .loading .dot.two {
-    -webkit-animation: cycleTwo 1s ease-in-out infinite;
-    -webkit-animation-direction: normal;
+html:before, body:before {
+    content: 'S';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 180px;
+    text-indent: -4px;
+    color: gold;
+    transform: translateX(-50%) translateY(-50%);
 }
 
-.chat-bubble .loading .dot.three {
-    -webkit-animation: cycleThree 1s ease-in-out infinite;
-    -webkit-animation-direction: normal;
+body:before {
+    z-index: 555;
 }
 
-@-webkit-keyframes cycleOne {
-    0% {
-        background: rgba(150, 150, 150, 0.4);
-    }
-    33.333% {
-        background: #969696;
-    }
-    66.6667% {
-        background: rgba(150, 150, 150, 0.4);
-    }
-    100% {
-        background: rgba(150, 150, 150, 0.4);
-    }
+html:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 140px;
+    background-color: #ebebe5;
+    background-image: linear-gradient(45deg, transparent 0%, transparent 49%, rgba(14, 20, 23, 0.3) 50%, rgba(14, 20, 23, 0.3) 100%);
+    background-repeat: no-repeat;
+    background-position: 0% 66%;
+    background-size: 100% 30px;
+    transform: translateX(-50%) translateY(-45%);
 }
 
-@-webkit-keyframes cycleTwo {
-    0% {
-        background: rgba(150, 150, 150, 0.4);
-    }
-    33.333% {
-        background: rgba(150, 150, 150, 0.4);
-    }
-    66.6667% {
-        background: #969696;
-    }
-    100% {
-        background: rgba(150, 150, 150, 0.4);
-    }
-}
-
-@-webkit-keyframes cycleThree {
-    0% {
-        background: rgba(150, 150, 150, 0.4);
-    }
-    33.333% {
-        background: rgba(150, 150, 150, 0.4);
-    }
-    66.6667% {
-        background: rgba(150, 150, 150, 0.4);
-    }
-    100% {
-        background: #969696;
-    }
+body:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 140px;
+    background-color: ;
+    background-image: linear-gradient(#ebebe5, #ebebe5), linear-gradient(#ebebe5, #ebebe5), linear-gradient(220deg, transparent 0%, transparent 49%, rgba(14, 20, 23, 0.3) 50%, rgba(14, 20, 23, 0.3) 100%);
+    background-size: 20px 30%, 20px 30%, 40px 50px;
+    background-repeat: no-repeat;
+    background-position: 50% 0%, 50% 100%, 100% 0%;
+    z-index: 999;
+    transform: translateX(-50%) translateY(-45%);
 }
