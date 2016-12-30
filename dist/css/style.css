@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:600,700);
+
 *, *:before, *:after {
     margin: 0;
     padding: 0;
@@ -60,6 +61,21 @@ body:after {
     z-index: 999;
     -webkit-transform: translateX(-50%) translateY(-45%);
             transform: translateX(-50%) translateY(-45%);
+}
+
+h1 {
+    text-align: center;
+    color: silver;
+    font-family: "Oswald";
+    font-weight: 700;
+    font-size: 4em;
+    margin: 0 25%;
+    border-top: .09em solid;
+    border-bottom: .09em solid;
+}
+
+.center-down {
+    margin-top: 65vh;
 }
 
 /*# sourceMappingURL=style.css.map */
